@@ -1,12 +1,14 @@
 import random
 
-def check_answer(guess, answer):
+def check_answer(guess, answer, turns):
     """Fuction to check user guess against actual answer"""
 
     if guess > answer:
         print("Too high!!!")
+        turns -= 1
     elif guess < answer:
         print("Too low!!!")
+        turns -= 1
     else:
         print(f"You got it!!! The answer was {answer}")
 
@@ -28,13 +30,13 @@ def game():
     answer = random.randint(1,100)
 
     lives = set_difficulty()
-    print(f"You have {lives} attempts remaining to guess the number")
 
     guess = 0
 
     while guess != answer:
         
+        print(f"You have {lives} attempts remaining to guess the number")   
         guess = int(input("Make a guess: "))
-        check_answer(guess, answer)
+        lives = check_answer(guess, answer, lives)
 
 game()
