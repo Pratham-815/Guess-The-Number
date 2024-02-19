@@ -1,1 +1,1 @@
-# Guess-The-Number
+# This repository contains the python code for the game knows as Guess The Number. In this game the user will have to guess a number between 1 and 100. The user will have attempts based on the difficulty chosen
