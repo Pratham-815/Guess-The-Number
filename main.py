@@ -21,12 +21,20 @@ def set_difficulty():
         return 10
     
 
-print("Welcome To The Number Guessing Game!!!")
-print("I am thinking of a number between 1 to 100")
+def game():
+    print("Welcome To The Number Guessing Game!!!")
+    print("I am thinking of a number between 1 to 100")
 
-answer = random.randint(1,100)
+    answer = random.randint(1,100)
 
-lives = set_difficulty()
-print(f"You have {lives} attempts remaining to guess the number")
+    lives = set_difficulty()
+    print(f"You have {lives} attempts remaining to guess the number")
 
-guess = int(input("Make a guess: "))
+    guess = 0
+
+    while guess != answer:
+        
+        guess = int(input("Make a guess: "))
+        check_answer(guess, answer)
+
+game()
