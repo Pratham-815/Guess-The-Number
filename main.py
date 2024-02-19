@@ -5,10 +5,10 @@ def check_answer(guess, answer, turns):
 
     if guess > answer:
         print("Too high!!!")
-        turns -= 1
+        return turns-1
     elif guess < answer:
         print("Too low!!!")
-        turns -= 1
+        return turns-1
     else:
         print(f"You got it!!! The answer was {answer}")
 
