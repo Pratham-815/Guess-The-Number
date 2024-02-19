@@ -29,3 +29,4 @@ answer = random.randint(1,100)
 guess = int(input("Make a guess: "))
 
 lives = set_difficulty()
+print(f"You have {lives} attempts remaining to guess the number")
